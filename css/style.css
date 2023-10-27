@@ -293,6 +293,7 @@
 
 .card{
     padding: 10px;
+    /* background: #000; */
 }
 
 .card-body{
@@ -303,7 +304,6 @@
 .card-text{
     color: yellow;
 }
-
 /* Team */
 
 /*** Product ***/
