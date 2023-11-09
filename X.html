@@ -400,3 +400,41 @@
     </div>
 </div>
 </div>
+
+
+
+
+
+<!-- Send data to maiv5l
+
+Initialize Email.js with your user ID and service ID
+emailjs.init("YOUR_USER_ID"); // Replace with your Email.js user ID
+
+Add an event listener to the form
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Get the form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    // Prepare the email template parameters
+    const templateParams = {
+        name: name,
+        email: email,
+        phone: phone,
+        message: message,
+    };
+
+    // Send the email using Email.js
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams) // Replace with your service ID and template ID
+        .then(function (response) {
+            alert("Message sent successfully!");
+            document.getElementById("contact-form").reset();
+        })
+        .catch(function (error) {
+            alert("Message sending failed. Please try again.");
+        });
+}); -->

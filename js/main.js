@@ -77,3 +77,27 @@
     
 })(jQuery);
 
+
+
+// Number validation
+const phoneInput = document.getElementById("phone");
+const phoneError = document.getElementById("phone-error");
+
+// Define a regular expression pattern for a valid phone number
+const phonePattern = /^\d{10}$/; // Adjust the pattern as needed for your specific requirements
+
+// Function to validate the phone number
+function validatePhoneNumber() {
+    if (phonePattern.test(phoneInput.value)) {
+        phoneError.textContent = ""; // Clear the error message
+        phoneInput.setCustomValidity(""); // Clear the built-in validation message
+    } else {
+        phoneError.textContent = "Please enter a valid 10-digit phone number.";
+        phoneInput.setCustomValidity("Please enter a valid 10-digit phone number.");
+    }
+}
+
+// Add an event listener to validate the phone number when the input changes
+phoneInput.addEventListener("input", validatePhoneNumber);
+
+
